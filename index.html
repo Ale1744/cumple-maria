@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¡Feliz cumple, María!</title>
+<meta name="description" content="Una tarjetita de cumpleaños para María, con mucho cariño.">
+<meta property="og:title" content="¡Feliz cumple, María!">
+<meta property="og:description" content="Abrí tu tarjetita y tocá a María para soplar las velas.">
+<meta name="theme-color" content="#F7DCE6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+html,body{margin:0;padding:0}
+body{background:#F7DCE6;min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:12px 0;box-sizing:border-box}
+#fit{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 10px 30px rgba(122,46,85,.18)}
+#card{width:720px;height:1120px;position:relative;overflow:hidden;box-sizing:border-box;background:#FCE8EF;font-family:'Lora',Georgia,serif;color:#5A2A43;border-radius:28px;transform-origin:0 0}
+@keyframes floaty{0%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-20px) rotate(4deg)}100%{transform:translateY(0) rotate(-4deg)}}
+.float{animation:floaty 6s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{animation:spin 40s linear infinite;transform-origin:50% 50%}
+.spin-fast{animation:spin 9s linear infinite;transform-origin:50% 50%}
+@keyframes twinkle{0%,100%{transform:scale(.5);opacity:.3}50%{transform:scale(1.15);opacity:1}}
+.twinkle{animation:twinkle 2.4s ease-in-out infinite;transform-origin:50% 50%}
+@keyframes fall{0%{transform:translateY(-60px) rotate(0deg)}100%{transform:translateY(1200px) rotate(600deg)}}
+.confetti{position:absolute;top:0;width:10px;height:16px;border-radius:2px;animation:fall 10s linear infinite}
+@keyframes flicker{0%,100%{transform:scale(1,1)}50%{transform:scale(.82,1.14)}}
+.flame{animation:flicker .55s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.flames{transition:opacity .35s ease}
+.flames.out{opacity:0}
+@keyframes halo{0%,100%{transform:scale(.85);opacity:.35}50%{transform:scale(1.15);opacity:.7}}
+.halo{animation:halo 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes rise{0%{transform:translateY(0);opacity:.7}100%{transform:translateY(-22px);opacity:0}}
+.smoke{opacity:0}
+.smoke.on{animation:rise 2.2s ease-out infinite}
+@keyframes glow{0%,100%{text-shadow:0 0 0 rgba(255,255,255,0)}50%{text-shadow:0 0 20px rgba(255,255,255,1),0 0 6px rgba(255,205,120,.9)}}
+.glow{animation:glow 3s ease-in-out infinite}
+.maria{background:none;border:none;padding:0;margin:0;cursor:pointer;border-radius:24px;-webkit-tap-highlight-color:transparent}
+.maria:focus-visible{outline:3px solid #F5C451;outline-offset:4px}
+.upper{transition:transform .75s cubic-bezier(.45,.05,.3,1);transform-box:view-box;transform-origin:100px 202px}
+.maria.bent .upper{transform:translateY(56px) scale(.97)}
+.gaze{transition:transform .5s ease}
+.maria.bent .gaze{transform:translateY(1.8px)}
+.mouth-o{opacity:0}
+.mouth-smile{opacity:1}
+.maria.blowing .mouth-o{opacity:1}
+.maria.blowing .mouth-smile{opacity:0}
+.puff{opacity:0;transition:opacity .2s ease}
+.puff.on{opacity:1}
+@keyframes puffmove{to{stroke-dashoffset:-24}}
+.puff path{stroke-dasharray:6 6;animation:puffmove .45s linear infinite}
+.cta{transition:transform .2s ease, box-shadow .2s ease;-webkit-tap-highlight-color:transparent}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(122,46,85,.28)}
+.cta:focus-visible{outline:3px solid #F5C451;outline-offset:3px}
+.cta:disabled{opacity:.7;cursor:default;transform:none;box-shadow:none}
+@keyframes popin{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.wish{animation:popin .5s ease-out both}
+.wish[hidden]{display:none}
+@media (prefers-reduced-motion: reduce){.float,.spin,.spin-fast,.twinkle,.confetti,.flame,.halo,.glow,.smoke.on,.puff path,.wish{animation:none}.upper{transition:none}}
+</style>
+</head>
+<body>
+<div id="fit">
+<div id="card">
+
+<div style="position: absolute; left: -90px; top: -70px; width: 300px; height: 300px; border-radius: 50%; background: #FFE0D3"></div>
+<div style="position: absolute; right: -110px; bottom: -90px; width: 340px; height: 340px; border-radius: 50%; background: #EEDDF8"></div>
+<div style="position: absolute; right: -60px; top: 300px; width: 160px; height: 160px; border-radius: 50%; background: #FFF1C9"></div>
+
+<div class="confetti" style="left: 6%; background: #F7A8C2; animation-delay: 0s; animation-duration: 11s"></div>
+<div class="confetti" style="left: 13%; background: #CDB4F0; animation-delay: -3s; animation-duration: 9s; width: 8px; height: 8px; border-radius: 50%"></div>
+<div class="confetti" style="left: 21%; background: #F5C451; animation-delay: -6s; animation-duration: 12s"></div>
+<div class="confetti" style="left: 28%; background: #A9DCC8; animation-delay: -1.5s; animation-duration: 10s; width: 8px; height: 8px; border-radius: 50%"></div>
+<div class="confetti" style="left: 36%; background: #FFB8A1; animation-delay: -8s; animation-duration: 13s"></div>
+<div class="confetti" style="left: 44%; background: #F7A8C2; animation-delay: -4.5s; animation-duration: 9.5s; width: 7px; height: 12px"></div>
+<div class="confetti" style="left: 52%; background: #CDB4F0; animation-delay: -10s; animation-duration: 11s"></div>
+<div class="confetti" style="left: 59%; background: #F5C451; animation-delay: -2s; animation-duration: 12.5s; width: 8px; height: 8px; border-radius: 50%"></div>
+<div class="confetti" style="left: 66%; background: #A9DCC8; animation-delay: -7s; animation-duration: 10.5s"></div>
+<div class="confetti" style="left: 73%; background: #FFB8A1; animation-delay: -5s; animation-duration: 9s; width: 8px; height: 8px; border-radius: 50%"></div>
+<div class="confetti" style="left: 80%; background: #F7A8C2; animation-delay: -9s; animation-duration: 12s"></div>
+<div class="confetti" style="left: 87%; background: #CDB4F0; animation-delay: -0.5s; animation-duration: 11.5s; width: 7px; height: 12px"></div>
+<div class="confetti" style="left: 93%; background: #F5C451; animation-delay: -6.5s; animation-duration: 10s"></div>
+<div class="confetti" style="left: 48%; background: #FFB8A1; animation-delay: -11s; animation-duration: 13s; width: 8px; height: 8px; border-radius: 50%"></div>
+
+<div style="position: absolute; inset: 18px; border: 2px solid #F0B3C8; border-radius: 24px; pointer-events: none"></div>
+<div style="position: absolute; inset: 28px; border: 1px dashed #F0B3C8; border-radius: 18px; pointer-events: none"></div>
+
+<svg class="twinkle" aria-hidden="true" width="26" height="26" viewBox="0 0 20 20" style="position: absolute; left: 70px; top: 120px; animation-delay: -0.4s"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#F5C451"/></svg>
+<svg class="twinkle" aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" style="position: absolute; left: 630px; top: 96px; animation-delay: -1.2s"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#F5C451"/></svg>
+<svg class="twinkle" aria-hidden="true" width="22" height="22" viewBox="0 0 20 20" style="position: absolute; left: 600px; top: 250px; animation-delay: -2s"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#E98FB0"/></svg>
+<svg class="twinkle" aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" style="position: absolute; left: 96px; top: 300px; animation-delay: -0.9s"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#B99AE6"/></svg>
+<svg class="twinkle" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style="position: absolute; left: 64px; top: 880px; animation-delay: -1.6s"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#F5C451"/></svg>
+<svg class="twinkle" aria-hidden="true" width="24" height="24" viewBox="0 0 20 20" style="position: absolute; left: 632px; top: 930px; animation-delay: -0.2s"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#F5C451"/></svg>
+
+<div style="position: relative; z-index: 2; height: 100%; box-sizing: border-box; padding: 64px 52px 56px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: #8E4A6C; font-weight: 500">
+<svg class="spin-fast" aria-hidden="true" width="18" height="18" viewBox="0 0 20 20"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#E98FB0"/></svg>
+<span>Hoy celebramos</span>
+<svg class="spin-fast" aria-hidden="true" width="18" height="18" viewBox="0 0 20 20"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#E98FB0"/></svg>
+</div>
+
+<h1 class="glow" style="margin: 0; font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 82px; line-height: 1.02; color: #7A2E55">¡Muy feliz cumple,<br>María!</h1>
+
+<div style="position: relative; width: 616px; height: 430px; flex-shrink: 0">
+
+<div style="position: absolute; left: 58px; top: 0px; width: 380px; height: 380px">
+<svg class="spin" aria-hidden="true" width="380" height="380" viewBox="-100 -100 200 200">
+<g fill="#F9CFDD" opacity="0.75">
+<ellipse cx="0" cy="0" rx="13" ry="94"/>
+<ellipse cx="0" cy="0" rx="13" ry="94" transform="rotate(22.5)"/>
+<ellipse cx="0" cy="0" rx="13" ry="94" transform="rotate(45)"/>
+<ellipse cx="0" cy="0" rx="13" ry="94" transform="rotate(67.5)"/>
+<ellipse cx="0" cy="0" rx="13" ry="94" transform="rotate(90)"/>
+<ellipse cx="0" cy="0" rx="13" ry="94" transform="rotate(112.5)"/>
+<ellipse cx="0" cy="0" rx="13" ry="94" transform="rotate(135)"/>
+<ellipse cx="0" cy="0" rx="13" ry="94" transform="rotate(157.5)"/>
+</g>
+<circle cx="0" cy="0" r="84" fill="none" stroke="#EFA3BE" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+<circle cx="0" cy="0" r="62" fill="#FFF3F7"/>
+<circle cx="0" cy="0" r="62" fill="none" stroke="#F5C451" stroke-width="1.2" stroke-dasharray="1 5" stroke-linecap="round"/>
+</svg>
+</div>
+
+<svg class="float" aria-hidden="true" width="66" height="176" viewBox="0 0 60 160" style="position: absolute; left: 0px; top: 40px; animation-delay: -1s"><ellipse cx="30" cy="35" rx="26" ry="32" fill="#F7B6CB"/><ellipse cx="21" cy="23" rx="6" ry="10" fill="#FFFFFF" opacity="0.55"/><path d="M26 66 L34 66 L30 72 Z" fill="#F7B6CB"/><path d="M30 72 Q22 95 32 115 Q40 135 30 158" fill="none" stroke="#C98FA6" stroke-width="1.5"/></svg>
+<svg class="float" aria-hidden="true" width="58" height="160" viewBox="0 0 60 160" style="position: absolute; left: 52px; top: 110px; animation-delay: -3.2s"><ellipse cx="30" cy="35" rx="26" ry="32" fill="#D9C2F0"/><ellipse cx="21" cy="23" rx="6" ry="10" fill="#FFFFFF" opacity="0.55"/><path d="M26 66 L34 66 L30 72 Z" fill="#D9C2F0"/><path d="M30 72 Q22 95 32 115 Q40 135 30 158" fill="none" stroke="#B39BC9" stroke-width="1.5"/></svg>
+<svg class="float" aria-hidden="true" width="52" height="148" viewBox="0 0 60 160" style="position: absolute; left: 4px; top: 220px; animation-delay: -4.6s"><ellipse cx="30" cy="35" rx="26" ry="32" fill="#FFD3B5"/><ellipse cx="21" cy="23" rx="6" ry="10" fill="#FFFFFF" opacity="0.55"/><path d="M26 66 L34 66 L30 72 Z" fill="#FFD3B5"/><path d="M30 72 Q22 95 32 115 Q40 135 30 158" fill="none" stroke="#D9A98A" stroke-width="1.5"/></svg>
+<svg class="float" aria-hidden="true" width="64" height="172" viewBox="0 0 60 160" style="position: absolute; right: 8px; top: 10px; animation-delay: -2.1s"><ellipse cx="30" cy="35" rx="26" ry="32" fill="#CDEBDD"/><ellipse cx="21" cy="23" rx="6" ry="10" fill="#FFFFFF" opacity="0.55"/><path d="M26 66 L34 66 L30 72 Z" fill="#CDEBDD"/><path d="M30 72 Q22 95 32 115 Q40 135 30 158" fill="none" stroke="#98C4AF" stroke-width="1.5"/></svg>
+<svg class="float" aria-hidden="true" width="58" height="160" viewBox="0 0 60 160" style="position: absolute; right: 62px; top: 50px; animation-delay: -0.3s"><ellipse cx="30" cy="35" rx="26" ry="32" fill="#FBE7A1"/><ellipse cx="21" cy="23" rx="6" ry="10" fill="#FFFFFF" opacity="0.6"/><path d="M26 66 L34 66 L30 72 Z" fill="#FBE7A1"/><path d="M30 72 Q22 95 32 115 Q40 135 30 158" fill="none" stroke="#D3BD72" stroke-width="1.5"/></svg>
+
+<button type="button" id="maria" class="maria" aria-label="Tocá a María para que sople las velas" style="position: absolute; left: 150px; top: 0px; width: 196px; height: 430px">
+<svg aria-hidden="true" width="196" height="430" viewBox="0 0 200 440" style="display: block; overflow: visible">
+<g>
+<path d="M78 200 L45 396 Q100 410 155 396 L122 200 Z" fill="#F2B0C7"/>
+<path d="M100 206 L96 398" fill="none" stroke="#E592B0" stroke-width="1.5"/>
+<path d="M100 206 L128 396" fill="none" stroke="#E592B0" stroke-width="1.5" opacity="0.7"/>
+<path d="M100 206 L72 396" fill="none" stroke="#E592B0" stroke-width="1.5" opacity="0.7"/>
+</g>
+<g class="upper">
+<circle cx="100" cy="36" r="12" fill="#E2BB66"/>
+<path d="M91 33 Q96 26 104 28 Q110 31 108 38" fill="none" stroke="#F2D68E" stroke-width="2" stroke-linecap="round"/>
+<circle cx="100" cy="35" r="3" fill="none" stroke="#F8E4AE" stroke-width="1.8"/>
+<rect x="93" y="94" width="14" height="20" rx="5" fill="#F3CDB4"/>
+<ellipse cx="100" cy="74" rx="26" ry="29" fill="#F6D7C2"/>
+<path d="M73 74 Q70 44 100 44 Q130 44 127 74 Q124 58 108 55 Q96 58 84 60 Q76 64 73 74 Z" fill="#EBC877"/>
+<path d="M80 60 Q94 50 112 53" fill="none" stroke="#F8E4AE" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="92" y="43" width="16" height="4.5" rx="2.2" fill="#E98FB0"/>
+<circle cx="74" cy="84" r="2.6" fill="#FFFFFF" stroke="#E6D3DA" stroke-width="0.6"/>
+<circle cx="126" cy="84" r="2.6" fill="#FFFFFF" stroke="#E6D3DA" stroke-width="0.6"/>
+<path d="M83 63 Q89 59.5 95 62" fill="none" stroke="#C9A35C" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M105 62 Q111 59.5 117 63" fill="none" stroke="#C9A35C" stroke-width="1.6" stroke-linecap="round"/>
+<ellipse cx="89" cy="74" rx="5" ry="4.4" fill="#FFFFFF"/>
+<ellipse cx="111" cy="74" rx="5" ry="4.4" fill="#FFFFFF"/>
+<g class="gaze">
+<circle cx="89.4" cy="74.4" r="2.9" fill="#6E8FB8"/>
+<circle cx="111.4" cy="74.4" r="2.9" fill="#6E8FB8"/>
+<circle cx="89.4" cy="74.4" r="1.4" fill="#33242B"/>
+<circle cx="111.4" cy="74.4" r="1.4" fill="#33242B"/>
+<circle cx="90.6" cy="73.2" r="0.9" fill="#FFFFFF"/>
+<circle cx="112.6" cy="73.2" r="0.9" fill="#FFFFFF"/>
+</g>
+<path d="M83.8 72.6 Q89 68.2 94.2 72.6" fill="none" stroke="#4A3138" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M105.8 72.6 Q111 68.2 116.2 72.6" fill="none" stroke="#4A3138" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="89" cy="74" r="9" fill="none" stroke="#B07A8E" stroke-width="1.3"/>
+<circle cx="111" cy="74" r="9" fill="none" stroke="#B07A8E" stroke-width="1.3"/>
+<path d="M98 73 Q100 71 102 73" fill="none" stroke="#B07A8E" stroke-width="1.3"/>
+<circle cx="81" cy="88" r="5" fill="#F4A9BF" opacity="0.6"/>
+<circle cx="119" cy="88" r="5" fill="#F4A9BF" opacity="0.6"/>
+<path class="mouth-smile" d="M92 90 Q100 97 108 90" fill="none" stroke="#C0587B" stroke-width="2" stroke-linecap="round"/>
+<ellipse class="mouth-o" cx="100" cy="92" rx="3.6" ry="4.2" fill="#C0587B"/>
+<path d="M72 122 Q100 110 128 122 L122 202 L78 202 Z" fill="#EFA3BE"/>
+<path d="M84 119 Q100 130 116 119" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="0.1 5.2"/>
+<rect x="78" y="195" width="44" height="9" rx="4" fill="#D9839F"/>
+<circle cx="112" cy="199.5" r="5" fill="#F5C451"/>
+<path d="M126 122 Q142 164 124 196" fill="none" stroke="#EFA3BE" stroke-width="13" stroke-linecap="round"/>
+<circle cx="122" cy="198" r="6.5" fill="#F6D7C2"/>
+<path d="M74 122 Q58 164 86 184" fill="none" stroke="#EFA3BE" stroke-width="13" stroke-linecap="round"/>
+<path d="M78 180 L100 180 L90 216 Z" fill="#FFF7EC"/>
+<path d="M78 180 L100 180 L90 216 Z" fill="none" stroke="#E7C9A8" stroke-width="1"/>
+<circle cx="80" cy="171" r="7" fill="#FFB8A1"/>
+<circle cx="92" cy="165" r="7.5" fill="#F7A8C2"/>
+<circle cx="102" cy="173" r="6.5" fill="#CDB4F0"/>
+<circle cx="86" cy="158" r="5.5" fill="#FBE7A1"/>
+<circle cx="92" cy="165" r="2.4" fill="#F5C451"/>
+<circle cx="80" cy="171" r="2" fill="#F5C451"/>
+<path d="M98 164 Q106 156 112 160" fill="none" stroke="#9CCBB2" stroke-width="3" stroke-linecap="round"/>
+<circle cx="88" cy="184" r="6.5" fill="#F6D7C2"/>
+</g>
+</svg>
+</button>
+
+<svg aria-hidden="true" width="290" height="150" viewBox="0 0 300 180" preserveAspectRatio="none" style="position: absolute; left: 103px; top: 282px; pointer-events: none">
+<ellipse cx="150" cy="172" rx="140" ry="7" fill="#F1C7D6"/>
+<path d="M8 20 L8 150 Q20 162 32 150 Q44 162 56 150 Q68 162 80 150 Q92 162 104 150 Q116 162 128 150 Q140 162 152 150 Q164 162 176 150 Q188 162 200 150 Q212 162 224 150 Q236 162 248 150 Q260 162 272 150 Q284 162 292 150 L292 20 Z" fill="#FFFFFF"/>
+<rect x="8" y="34" width="284" height="22" fill="#F9D3E0"/>
+<g fill="#F7B6CB">
+<circle cx="40" cy="90" r="3.5"/><circle cx="80" cy="112" r="3.5"/><circle cx="120" cy="88" r="3.5"/><circle cx="160" cy="114" r="3.5"/><circle cx="200" cy="90" r="3.5"/><circle cx="240" cy="112" r="3.5"/><circle cx="270" cy="84" r="3.5"/><circle cx="60" cy="134" r="3.5"/><circle cx="140" cy="136" r="3.5"/><circle cx="220" cy="134" r="3.5"/>
+</g>
+<ellipse cx="150" cy="20" rx="146" ry="16" fill="#FFF6F9"/>
+<ellipse cx="150" cy="20" rx="146" ry="16" fill="none" stroke="#F3C1D2" stroke-width="1.5"/>
+</svg>
+
+<svg aria-hidden="true" width="130" height="139" viewBox="0 0 150 160" style="position: absolute; left: 183px; top: 169px; pointer-events: none">
+<ellipse cx="75" cy="150" rx="70" ry="8" fill="#F3CADB"/>
+<rect x="15" y="95" width="120" height="52" rx="9" fill="#B99AE6"/>
+<path d="M15 104 Q15 95 24 95 L126 95 Q135 95 135 104 L135 108 Q128 116 121 108 Q114 118 106 108 Q98 118 90 108 Q82 118 75 108 Q68 118 60 108 Q52 118 44 108 Q36 118 29 108 Q22 116 15 108 Z" fill="#FFFFFF"/>
+<circle cx="35" cy="128" r="3.2" fill="#F5C451"/>
+<circle cx="60" cy="132" r="3.2" fill="#FFFFFF"/>
+<circle cx="90" cy="128" r="3.2" fill="#F7A8C2"/>
+<circle cx="115" cy="132" r="3.2" fill="#F5C451"/>
+<rect x="35" y="60" width="80" height="38" rx="8" fill="#9C7BD4"/>
+<circle cx="52" cy="86" r="2.6" fill="#F5C451"/>
+<circle cx="75" cy="88" r="2.6" fill="#FFFFFF"/>
+<circle cx="98" cy="86" r="2.6" fill="#F7A8C2"/>
+<path d="M35 68 Q35 60 43 60 L107 60 Q115 60 115 68 L115 71 Q109 78 103 71 Q97 78 91 71 Q85 78 79 71 Q73 78 67 71 Q61 78 55 71 Q49 78 43 71 Q39 76 35 71 Z" fill="#FFFFFF"/>
+<rect x="54" y="38" width="7" height="24" rx="2" fill="#F07FA5"/>
+<rect x="71.5" y="34" width="7" height="28" rx="2" fill="#5FB0DE"/>
+<rect x="89" y="38" width="7" height="24" rx="2" fill="#F07FA5"/>
+<path d="M54 44 L61 41 M54 51 L61 48 M54 58 L61 55" stroke="#FFFFFF" stroke-width="1.6"/>
+<path d="M71.5 40 L78.5 37 M71.5 47 L78.5 44 M71.5 54 L78.5 51 M71.5 61 L78.5 58" stroke="#FFFFFF" stroke-width="1.6"/>
+<path d="M89 44 L96 41 M89 51 L96 48 M89 58 L96 55" stroke="#FFFFFF" stroke-width="1.6"/>
+<g id="flames" class="flames">
+<circle class="halo" cx="57.5" cy="27" r="13" fill="#FFE07A" opacity="0.45"/>
+<circle class="halo" cx="75" cy="23" r="13" fill="#FFE07A" opacity="0.45" style="animation-delay: -0.6s"/>
+<circle class="halo" cx="92.5" cy="27" r="13" fill="#FFE07A" opacity="0.45" style="animation-delay: -1.1s"/>
+<ellipse class="flame" cx="57.5" cy="28" rx="5.6" ry="10" fill="#FF8A1F"/>
+<ellipse class="flame" cx="57.5" cy="31" rx="2.8" ry="5.4" fill="#FFE45C"/>
+<ellipse class="flame" cx="75" cy="24" rx="5.6" ry="10" fill="#FF8A1F" style="animation-delay: -0.2s"/>
+<ellipse class="flame" cx="75" cy="27" rx="2.8" ry="5.4" fill="#FFE45C" style="animation-delay: -0.2s"/>
+<ellipse class="flame" cx="92.5" cy="28" rx="5.6" ry="10" fill="#FF8A1F" style="animation-delay: -0.35s"/>
+<ellipse class="flame" cx="92.5" cy="31" rx="2.8" ry="5.4" fill="#FFE45C" style="animation-delay: -0.35s"/>
+</g>
+<g id="smoke" class="smoke">
+<path d="M57 34 Q53 26 58 20 Q62 14 57 8" fill="none" stroke="#B9A9B2" stroke-width="2" stroke-linecap="round"/>
+<path d="M75 30 Q71 22 76 16 Q80 10 75 4" fill="none" stroke="#B9A9B2" stroke-width="2" stroke-linecap="round"/>
+<path d="M93 34 Q89 26 94 20 Q98 14 93 8" fill="none" stroke="#B9A9B2" stroke-width="2" stroke-linecap="round"/>
+</g>
+</svg>
+
+<svg id="puff" class="puff" aria-hidden="true" width="44" height="40" viewBox="0 0 44 40" style="position: absolute; left: 226px; top: 146px; pointer-events: none">
+<path d="M22 2 Q19 18 22 36" fill="none" stroke="#9FC3E6" stroke-width="3" stroke-linecap="round"/>
+<path d="M12 4 Q6 18 11 34" fill="none" stroke="#9FC3E6" stroke-width="3" stroke-linecap="round"/>
+<path d="M32 4 Q38 18 33 34" fill="none" stroke="#9FC3E6" stroke-width="3" stroke-linecap="round"/>
+</svg>
+
+<div style="position: absolute; right: 0px; top: 226px; width: 180px; display: flex; flex-direction: column; align-items: center; gap: 8px">
+<button type="button" id="cta" class="cta" style="min-height: 46px; width: 100%; padding: 10px 14px; border: none; border-radius: 999px; background: #7A2E55; color: #FFFFFF; font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 500; line-height: 1.25; cursor: pointer">Soplar las velas</button>
+<span style="font-size: 14px; font-style: italic; color: #8E4A6C">o tocá a María</span>
+<div id="wish" class="wish" hidden style="margin-top: 6px; padding: 12px 14px; background: #FFFFFF; border: 2px solid #F0B3C8; border-radius: 18px; box-shadow: 0 8px 22px rgba(160,64,95,.18); flex-direction: column; align-items: center; gap: 4px">
+<svg class="twinkle" aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" style="display: block; margin: 0 auto"><path d="M10 0 L12.4 7.6 L20 10 L12.4 12.4 L10 20 L7.6 12.4 L0 10 L7.6 7.6 Z" fill="#F5C451"/></svg>
+<p style="margin: 4px 0 0; font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 27px; line-height: 1.15; color: #A0405F">¡Que se cumplan todos tus deseos!</p>
+</div>
+</div>
+
+</div>
+
+<p style="margin: 0; max-width: 560px; font-size: 21px; line-height: 1.6; color: #5A2A43">Te envío todo mi cariño en este día tan especial. Gracias por ser quien sos: por tu calidez, tu fuerza y la confianza de cada día. Es un gusto acompañarte y compartir esta linda conexión que tenemos. ¡Que este nuevo año te regale salud, alegría y muchos momentos felices!</p>
+
+<p style="margin: 4px 0 0; font-family: 'Dancing Script', cursive; font-weight: 600; font-size: 40px; line-height: 1.1; color: #7A2E55">Con cariño, Alejandra</p>
+
+</div>
+</div>
+</div>
+
+<script>
+(function () {
+  var fitBox = document.getElementById('fit');
+  var card = document.getElementById('card');
+  function fit() {
+    var s = Math.min(1, (window.innerWidth - 24) / 720);
+    card.style.transform = 'scale(' + s + ')';
+    fitBox.style.width = (720 * s) + 'px';
+    fitBox.style.height = (1120 * s) + 'px';
+  }
+  window.addEventListener('resize', fit);
+  fit();
+
+  var maria = document.getElementById('maria');
+  var cta = document.getElementById('cta');
+  var puff = document.getElementById('puff');
+  var flames = document.getElementById('flames');
+  var smoke = document.getElementById('smoke');
+  var wish = document.getElementById('wish');
+  var phase = 'idle';
+
+  function setPhase(p) {
+    phase = p;
+    var bent = p === 'bending' || p === 'blowing' || p === 'out';
+    var blowing = p === 'blowing' || p === 'out';
+    var out = p === 'out' || p === 'done';
+    var busy = p !== 'idle' && p !== 'done';
+    maria.classList.toggle('bent', bent);
+    maria.classList.toggle('blowing', blowing);
+    puff.classList.toggle('on', blowing);
+    flames.classList.toggle('out', out);
+    smoke.classList.toggle('on', out);
+    if (p === 'done') { wish.hidden = false; wish.style.display = 'flex'; }
+    else { wish.hidden = true; wish.style.display = 'none'; }
+    cta.disabled = busy;
+    cta.textContent = p === 'done' ? 'Volver a encender' : (busy ? 'Soplando…' : 'Soplar las velas');
+  }
+
+  function start() {
+    if (phase === 'done') { setPhase('idle'); return; }
+    if (phase !== 'idle') { return; }
+    setPhase('bending');
+    setTimeout(function () { setPhase('blowing'); }, 750);
+    setTimeout(function () { setPhase('out'); }, 1500);
+    setTimeout(function () { setPhase('done'); }, 2300);
+  }
+
+  maria.addEventListener('click', start);
+  cta.addEventListener('click', start);
+})();
+</script>
+</body>
+</html>
